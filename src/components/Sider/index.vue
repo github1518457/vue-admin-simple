@@ -14,60 +14,35 @@ defineProps({
   collapsed: Boolean
 });
 
-const navList = [
+const navList = ref([
   {
     key: '1',
-    title: '一级导航 1'
+    pid: 0,
+    title: 'Navigation 1'
   },
   {
     key: '2',
-    title: '一级导航 2',
+    pid: 0,
+    title: 'Navigation 2',
     children: [
-      { key: '2-1', title: '二级导航 2-1' },
+      { key: '2-1', title: 'Option 2-1' },
       {
         key: '2-2',
-        title: '二级导航 2-2',
+        title: 'Option 2-2',
         children: [
-          { key: '2-2-1', title: '三级导航 2-2-1' },
-          { key: '2-2-2', title: '三级导航 2-2-2' }
+          { key: '2-2-1', title: 'Option 2-2-1' },
+          { key: '2-2-2', title: 'Option 2-2-2' }
         ]
       },
-      { key: '2-3', title: '二级导航 2-3' }
+      { key: '2-3', title: 'Option 2-3' }
     ]
   },
   {
     key: '3',
-    title: '一级导航 3'
+    pid: 0,
+    title: 'Navigation 3'
   }
-];
-
-// const list: any = [
-//   {
-//     key: '1',
-//     title: 'Option 1'
-//   },
-//   {
-//     key: '2',
-//     title: 'Navigation One',
-//     children: [
-//       {
-//         key: '2.1',
-//         title: 'Option 2'
-//       }
-//     ]
-//   },
-//   {
-//     key: '3',
-//     title: 'Navigation Two',
-//     children: [
-//       {
-//         key: '3.1',
-//         title: 'SubMenu',
-//         children: [{ key: '3.1.1', title: 'Option 3.1.1' }]
-//       }
-//     ]
-//   }
-// ];
+] as any[]);
 </script>
 
 <style scoped>
